@@ -10,20 +10,26 @@ namespace Wk4Ex1
     {
         static void Main(string[] args)
         {
+            double userMoney = 0;
+            int fromCurrency, toCurrency;
             Console.Write("How much Money do you have?");
-            double userMoney = Convert.ToDouble(Console.Read());
-            Console.Write("What type of money is it? 1 For USD 2 for EUR and 3 For JPY");
-            int fromCurrency = Convert.ToInt32(Console.Read());
-            Console.WriteLine($"You have {userMoney}, selected {fromCurrency}");
-            Console.Write("What do you want to convert it to?");
-            int toCurency = Convert.ToInt32(Console.Read());
+            userMoney = Convert.ToDouble(Console.Read());
 
-            switch (toCurency)
+            Console.Write("What type of money is it? 1 For USD 2 for EUR and 3 For JPY");
+            fromCurrency = Convert.ToInt32(Console.Read());
+
+            Console.WriteLine($"You have {userMoney}, selected {fromCurrency}");
+
+            Console.Write("What do you want to convert it to?");
+            toCurrency = Convert.ToInt32(Console.Read());
+
+            switch (toCurrency)
             {
                 case 1:
                     ConvertToUSD(userMoney, fromCurrency);
                     break;
                 case 2:
+
                     break;
                 case 3:
                     break;
